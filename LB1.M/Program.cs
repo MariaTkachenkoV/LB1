@@ -22,13 +22,15 @@ namespace LB1.M
             Console.WriteLine("Задание №2");
             try
             {
-                Console.WriteLine("Введите число секунд"); 
-                double Seconds = Convert.ToDouble(Console.ReadLine()),
-                       Minutes = (Seconds / 60),
-                       Hours = (Seconds / 3600);
-                Console.WriteLine("Прошло "+Seconds+" секунд");
-                Console.WriteLine("Прошло "+Minutes+" минут");
-                Console.WriteLine("Прошло "+Hours+" часов");
+                Console.WriteLine("Напишите число секунд");
+                double sec = Convert.ToDouble(Console.ReadLine()),
+                Sec1 = sec % 60,
+                min = (sec - Sec1) / 60,
+                Min1 = min % 60,
+                hours = (min - Min1) / 60;
+                Console.WriteLine("Прошло "+hours+"часов");
+                Console.WriteLine("Прошло "+Min1+" минут");
+                Console.WriteLine("Прошло "+Sec1+" секунд");
             }
             catch
             {
@@ -112,7 +114,7 @@ namespace LB1.M
             {
                 Console.WriteLine("Error");
             }
-
+            //Шестое
             Console.WriteLine("Задание №6");
             try
             {
